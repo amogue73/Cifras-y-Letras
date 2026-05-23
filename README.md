@@ -6,6 +6,9 @@ This repository is a game based on the TV show "Cifras y Letras", which is also 
 ## How to play
 
 Download all the files and execute:
+
   python juego.py
+  
 or:
+
   python juego.py --seed <a number>
