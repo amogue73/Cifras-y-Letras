@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+juego.py
+
+Autor: Claude Opus 4.6
+
 ╔═══════════════════════════════════════════════════╗
 ║          CIFRAS Y LETRAS - El Juego               ║
 ║  Basado en el programa de televisión español      ║
@@ -272,7 +276,7 @@ def pantalla_bienvenida(seed):
     print(Color.CYAN + Color.BOLD)
     print("   ╔═══════════════════════════════════════════════╗")
     print("   ║                                               ║")
-    print("   ║         🔢  CIFRAS  Y  LETRAS  🔤            ║")
+    print("   ║         🔢  CIFRAS  Y  LETRAS  🔤             ║")
     print("   ║                                               ║")
     print("   ╚═══════════════════════════════════════════════╝")
     print(Color.RESET)
@@ -410,14 +414,17 @@ def jugar_ronda_cifras(numeros, objetivo, num_ronda):
         if diff == 0:
             puntos = 10
             resultado_texto = f"{Color.GREEN}¡Cifra exacta! ({objetivo}){Color.RESET}"
-        elif diff <= 5:
+        elif diff <= 2:
             puntos = 7
             resultado_texto = f"{Color.YELLOW}Cerca: {mejor_numero} (diferencia: {diff}){Color.RESET}"
-        elif diff <= 10:
+        elif diff <= 5:
             puntos = 5
             resultado_texto = f"{Color.YELLOW}Aproximación: {mejor_numero} (diferencia: {diff}){Color.RESET}"
-        elif mejor_numero is not None:
+        elif diff <= 10:
             puntos = 2
+            resultado_texto = f"{Color.YELLOW}Aproximación: {mejor_numero} (diferencia: {diff}){Color.RESET}"
+        elif mejor_numero is not None:
+            puntos = 0
             resultado_texto = f"{Color.RED}Lejos: {mejor_numero} (diferencia: {diff}){Color.RESET}"
         else:
             puntos = 0

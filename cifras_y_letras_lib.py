@@ -1,3 +1,16 @@
+"""
+cifras_y_letras_lib.py
+
+Autor: Alejandro Moreno Guerrero
+
+Esta librería contiene toda la lógica del juego. Hay dos clases: Cuentas y Palabras.
+Las clases se relacionan respectimante con el juego de La Cifra exacta y La Palabra más larga.
+Contienen las variables y métodos necesarios para almacenar el estado del juego,
+hacer que el usuario interaccione y hacer la resolución automática.
+
+"""
+
+
 import random
 from collections import deque
 import numpy as np
