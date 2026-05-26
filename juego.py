@@ -16,6 +16,9 @@ Se puede compartir la seed para comparar resultados.
 Uso:
   python juego.py                  → partida con seed aleatoria
   python juego.py --seed 12345     → partida con seed específica
+
+Esta parte la ha programado casi al completo Claude, tomando
+como base cifras_y_letras_lib
 """
 
 import sys
